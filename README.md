@@ -49,3 +49,6 @@ This project is powered by X, utilizes X, and the file system module (node packa
 Features of this application include the user's ability to X, entirely from the command line.
 
 
+## Usage Information
+
+To run this application, use the command line to navigate to the directory of the application, install all dependencies (`npm i`), then type the command `node index.js`. You will then be taken through a series of questions. Once you've done X you can then do X.
