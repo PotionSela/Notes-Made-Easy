@@ -52,3 +52,8 @@ Features of this application include the user's ability to X, entirely from the 
 ## Usage Information
 
 To run this application, use the command line to navigate to the directory of the application, install all dependencies (`npm i`), then type the command `node index.js`. You will then be taken through a series of questions. Once you've done X you can then do X.
+
+
+## Contribution Guidelines
+
+Open to collaboration. If you choose to do so, open an issue and modify any changes you would like to see on a feature branch and wait for approval before merging to the main branch.
