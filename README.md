@@ -57,3 +57,8 @@ To run this application, use the command line to navigate to the directory of th
 ## Contribution Guidelines
 
 Open to collaboration. If you choose to do so, open an issue and modify any changes you would like to see on a feature branch and wait for approval before merging to the main branch.
+
+
+## License
+
+This application is covered under the MIT License.
