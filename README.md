@@ -62,3 +62,8 @@ Open to collaboration. If you choose to do so, open an issue and modify any chan
 ## License
 
 This application is covered under the MIT License.
+
+
+## Questions
+
+Have additional questions? [Contact me through my GitHub account](https://github.com/PotionSela) or email me at giselamata27@gmail.com.
