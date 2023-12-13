@@ -15,3 +15,15 @@ This simple note taking app makes it easier for you to keep track of all the thi
 ## Description
 
 A description will go here!
+
+### Screenshots
+**Examples of X goes here:**
+
+![example-logo1](./example-goes-here)
+![example-logo2](./example-goes-here)
+
+
+**Screenshots of application:**
+
+![example-1](./example-goes-here)
+![example-2](./example-goes-here)
