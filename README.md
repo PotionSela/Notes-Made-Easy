@@ -44,3 +44,8 @@ This project is powered by X, utilizes X, and the file system module (node packa
 6. To run the application, within the terminal, type the command `node index.js`.
 
 
+## Features
+
+Features of this application include the user's ability to X, entirely from the command line.
+
+
