@@ -9,3 +9,9 @@ const uniqid = require("uniqid");
 
 // Port
 const PORT = process.env.PORT || 3001;
+
+// Adding in Middleware
+appendFile.use(express.json());
+appendFile.use(express.urlencoded({ extended: true}));
+
+appendFile.use(express.static("public"));
