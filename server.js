@@ -20,3 +20,8 @@ appendFile.use(express.static("public"));
 app.get("/notes", (req, res) => 
     res.sendFile(path.join(__dirname, "Develop/public/notes.html"))
 );
+
+// Get route which sends back the index.html page
+app.get("/", (req, res) =>
+  res.sendFile(path.join(__dirname, "Develop/public/index.html"))
+);
