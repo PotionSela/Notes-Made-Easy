@@ -15,3 +15,8 @@ appendFile.use(express.json());
 appendFile.use(express.urlencoded({ extended: true}));
 
 appendFile.use(express.static("public"));
+
+// Get route which sends back the notes.html page
+app.get("/notes", (req, res) => 
+    res.sendFile(path.join(__dirname, "Develop/public/notes.html"))
+);
