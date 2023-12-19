@@ -79,6 +79,23 @@ app.post("/api/notes", (req, res) => {
   }
 });
 
+// Delete route to reads the db.json file, uses the uniqids to match the object thats to be deleted, 
+// removes that object from the file, then re-writes it
+app.delete("/api/notes/:id", (req, res) => {
+  let id = req.params.id;
+  let parsedData;
+  fs.readFile("Develop/db/db.json", "utf8", (err, data) => {
+    if (err) {
+      console.error(err);
+    } else {
+      parsedData = JSON.parse(data);
+      const filterData = parsedData.filter((note) => note.id !== id);
+      writeNewNoteToJson("Develop/db/db.json", filterData);
+    }
+  });
+  res.send(`Deleted note with ${req.params.id}`);
+});
+
 // This is used to activate our local server
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT}`)
