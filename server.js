@@ -37,6 +37,20 @@ app.get("/api/notes", function (req, res) {
   });
 });
 
+// Reads the new notes from the request body then adds them to the db.json file
+const readThenAppendToJson = (content, file) => {
+  fs.readFile(file, "utf8", (err, data) => {
+    if (err) {
+      console.error(err);
+    } else {
+      const parsedData = JSON.parse(data);
+      parsedData.push(content);
+      writeNewNoteToJson(file, parsedData);
+    }
+  });
+};
+
+
 // This is used to spin up our local server
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT}`)
