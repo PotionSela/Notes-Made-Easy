@@ -14,10 +14,9 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 // Adding in Middleware
-appendFile.use(express.json());
-appendFile.use(express.urlencoded({ extended: true }));
-
-appendFile.use(express.static("Develop/public"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("Develop/public"));
 
 // Get route which sends back the index.html page
 app.get("/", (req, res) =>
