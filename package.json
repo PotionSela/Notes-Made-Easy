@@ -1,0 +1,13 @@
+{
+  "name": "miniature-eureka",
+  "version": "1.0.0",
+  "description": "This simple note taking app makes it easier for you to keep track of all the things on your To Do list!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
