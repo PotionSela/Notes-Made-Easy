@@ -50,8 +50,36 @@ const readThenAppendToJson = (content, file) => {
   });
 };
 
+// Writes data to db.json and utilized with the readThenAppendToJson function
+const writeNewNoteToJson = (destination, content) =>
+  fs.writeFile(destination, JSON.stringify(content, null, 4), (err) =>
+    err ? console.error(err) : console.info(`\nData written to ${destination}`)
+  );
 
-// This is used to spin up our local server
+// Post route and receives a new note, saves it, adds it to the db.json file, and then returns the new note
+app.post("/api/notes", (req, res) => {
+  const { title, text } = req.body;
+  if (title && text) {
+    const newNote = {
+      title: title,
+      text: text,
+      id: uniqid(),
+    };
+
+    readThenAppendToJson(newNote, "Develop/db/db.json");
+
+    const response = {
+      status: "success",
+      body: newNote,
+    };
+
+    res.json(response);
+  } else {
+    res.json("Error in posting new note");
+  }
+});
+
+// This is used to activate our local server
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT}`)
 );
