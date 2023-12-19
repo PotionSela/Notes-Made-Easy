@@ -29,11 +29,6 @@ app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "Develop/public/notes.html"))
 );
 
-// Get route to send back to the notes.html file
-app.get("/notes", (req, res) =>
-  res.sendFile(path.join(__dirname, "Develop/public/notes.html"))
-);
-
 // This is used to spin up our local server
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT}`)
