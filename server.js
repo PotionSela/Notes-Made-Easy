@@ -28,6 +28,15 @@ app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "Develop/public/notes.html"))
 );
 
+// Get route which reads the db.json file and sends back the parsed JSON data
+app.get("/api/notes", function (req, res) {
+  fs.readFile("Develop/db/db.json", "utf8", (err, data) => {
+    var jsonData = JSON.parse(data);
+    console.log(jsonData);
+    res.json(jsonData);
+  });
+});
+
 // This is used to spin up our local server
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT}`)
